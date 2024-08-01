@@ -4,7 +4,9 @@ import path from 'path';
 import cookieParser from "cookie-parser";
 import cors from 'cors';
 import mongoose from 'mongoose';
+import bcrypt from 'bcrypt';
 import {userAuthRouter} from './Routes/userAuthRoutes.js'
+import { userAppRouter } from './Routes/userAppRoutes.js';
 const app = express()
 app.use(cors(
     {
@@ -21,7 +23,7 @@ app.use(cors(
 app.use(express.json());
 app.use(cookieParser());
 app.use('/auth',userAuthRouter);
-// app.use('/app',userApiRouter);
+app.use('/app',userAppRouter);
 dotenv.config({path:'secrets.env'});
 const port = process.env.PORT
 
