@@ -26,6 +26,10 @@ dotenv.config({path:'secrets.env'});
 const port = process.env.PORT
 
 
+mongoose.connect(process.env.MONGODB_URI).then(()=> console.log("Database connected!")).catch(err=>{
+    console.log(err.message);
+});
+
 
 
 

@@ -48,7 +48,7 @@ const navigate=useNavigate();
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign up for an account</h2>
         </div>
-        <form className="mt-8 text-black space-y-6 flex flex-col gap-5" onSubmit={handleSubmit}>
+        <form method='post' className="mt-8 text-black space-y-6 flex flex-col gap-5" onSubmit={handleSubmit}>
           <input type="hidden" name="remember" value="true" />
           <div className="rounded-md shadow-sm -space-y-px flex flex-col gap-5">
             <div>

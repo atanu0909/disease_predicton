@@ -6,6 +6,9 @@ import userModel from '../model/userModel.js';
 
 const router = express.Router();
 
+router.get('/check',()=>{
+    res.send('Status Ok')
+})
 // Signup route
 router.post('/signup', async (req, res) => {
     try {
